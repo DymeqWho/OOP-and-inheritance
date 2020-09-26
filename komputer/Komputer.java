@@ -1,36 +1,10 @@
 package com.sda.komputer;
 
-public class Komputer implements Proces, PlytaGlowna {
+public class Komputer {
 
     private boolean wlaczony;
     private Proces procesor;
     private PlytaGlowna plytaGlowna;
-
-    public void setProcesor(Proces procesor) {
-        this.procesor = procesor;
-    }
-
-    public void setPlytaGlowna(PlytaGlowna plytaGlowna) {
-        this.plytaGlowna = plytaGlowna;
-    }
-
-    public Proces getProcesor() {
-        return procesor;
-    }
-
-    public PlytaGlowna getPlytaGlowna() {
-        return plytaGlowna;
-    }
-
-    @Override
-    public boolean czyObslugujeIntel() {
-        return true;
-    }
-
-    @Override
-    public boolean czyIntel() {
-        return true;
-    }
 
     public Komputer(Proces procesor, PlytaGlowna plytaGlowna) {
         this.plytaGlowna = plytaGlowna;
@@ -38,12 +12,8 @@ public class Komputer implements Proces, PlytaGlowna {
 
     }
 
-    IntelCore intelCore = new IntelCore();
-    AmdRyzen amdRyzen = new AmdRyzen();
-
-
     private boolean czyCzesciPasuja() {
-        if ((procesor.czyIntel() == intelCore.czyIntel() && plytaGlowna.czyObslugujeIntel() == intelCore.czyObslugujeIntel()) || (procesor.czyIntel() != amdRyzen.czyIntel() && plytaGlowna.czyObslugujeIntel() != amdRyzen.czyObslugujeIntel())) {
+        if ((procesor.czyIntel() && plytaGlowna.czyObslugujeIntel()) || (!procesor.czyIntel() && !plytaGlowna.czyObslugujeIntel())) {
             return true;
         } else return false;
     }

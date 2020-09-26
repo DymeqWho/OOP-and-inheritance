@@ -4,10 +4,14 @@ public class KomputerMain {
 
     public static void main(String[] args) {
 
-    Komputer komputer = new Komputer(Proces , PlytaGlowna );
+        Proces procesorIntel = new IntelCore();
+        PlytaGlowna plytaGlownaIntel = new IntelCore();
+        Proces procesorAmd = new AmdRyzen();
+        PlytaGlowna plytaGlownaAmd = new AmdRyzen();
 
-    komputer.wlacz();
+        Komputer komputer = new Komputer(procesorAmd, plytaGlownaAmd);
 
+        komputer.wlacz();
 
     }
 }
