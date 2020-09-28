@@ -14,10 +14,14 @@ public class AnimalsMain {
         animal1.voice();
 
 
+
+
+
         Animal[] animals = new Animal[3];
         animals[0] = cat1;
         animals[1] = dog1;
         animals[2] = animal1;
+
 
 
     }

@@ -9,9 +9,20 @@ public class KomputerMain {
         Proces procesorAmd = new AmdRyzen();
         PlytaGlowna plytaGlownaAmd = new AmdRyzen();
 
-        Komputer komputer = new Komputer(procesorAmd, plytaGlownaAmd);
+        Komputer komputerIntel = new Komputer(procesorIntel, plytaGlownaIntel);
 
-        komputer.wlacz();
+        System.out.print("Komputer obsługuje Intel: ");
+        komputerIntel.wlacz();
+
+        Komputer komputerAmd = new Komputer(procesorAmd, plytaGlownaAmd);
+
+        System.out.print("Komputer obsługuje AMD: ");
+        komputerAmd.wlacz();
+
+        Komputer komputerMix = new Komputer(procesorAmd, plytaGlownaIntel);
+
+        System.out.print("Komputer to mix części: ");
+        komputerMix.wlacz();
 
     }
 }

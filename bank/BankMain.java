@@ -30,7 +30,7 @@ public class BankMain {
         System.out.println("creditAccountYearProfit = " + creditAccountYearProfit);
 
         System.out.println();
-        
+
         savingAccount.setCurrentBallance(BigDecimal.valueOf(50789.99));
         BigDecimal savingAccountCurrentBallance = savingAccount.getCurrentBallance();
         System.out.println("savingAccountCurrentBallance = " + savingAccountCurrentBallance);

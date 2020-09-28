@@ -3,8 +3,8 @@ package com.sda.komputer;
 public class Komputer {
 
     private boolean wlaczony;
-    private Proces procesor;
-    private PlytaGlowna plytaGlowna;
+    private final Proces procesor; //ten zestaw słów to kompozycja
+    private final PlytaGlowna plytaGlowna;
 
     public Komputer(Proces procesor, PlytaGlowna plytaGlowna) {
         this.plytaGlowna = plytaGlowna;

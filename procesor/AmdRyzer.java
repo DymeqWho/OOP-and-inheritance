@@ -6,11 +6,11 @@ public class AmdRyzer implements Proces, PlytaGlowna{
 
     @Override
     public boolean czyObslugujeIntel() {
-        return true;
+        return false;
     }
 
     @Override
     public boolean czyIntel() {
-        return true;
+        return false;
     }
 }

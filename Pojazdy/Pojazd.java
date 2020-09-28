@@ -37,6 +37,6 @@ public class Pojazd {
     }
 
     public String toString() {
-       return "Pojazd ma prędkość maksymalną: " + maxSpeed + ", aktualną prędkość " + actualSpeed;
+        return "Pojazd ma prędkość maksymalną: " + maxSpeed + ", aktualną prędkość " + actualSpeed;
     }
 }
